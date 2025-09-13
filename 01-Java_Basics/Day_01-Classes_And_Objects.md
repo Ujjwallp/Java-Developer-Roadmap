@@ -40,9 +40,6 @@ class Car {
 }
 ```
 
-🤖 **AI Hint:**  
-Think of a class as *just an idea*, not the real thing. Objects make it real.
-
 ---
 
 ## 🚗 The Real Thing: What is an Object?  
@@ -60,9 +57,6 @@ Car car1 = new Car();   // First Object
 Car car2 = new Car();   // Second Object
 ```
 
-🤖 **AI Debug Tip:**  
-If you forget `new`, Java won’t create an object → you’ll get a `NullPointerException`.
-
 ---
 
 ## 👷 The Builder: The new Keyword  
@@ -72,9 +66,6 @@ It creates an Object from a Class blueprint.
 ```java
 Car car1 = new Car();
 ```
-
-🤖 **AI Hint:**  
-Always remember: `new` = memory allocation in the heap.
 
 ---
 
@@ -110,9 +101,6 @@ public static String builder = "Modern Builders";
 - ❌ Static cannot access non-static directly.  
 - ✅ You must first create an object, then access it.  
 
-🤖 **Interview Insight:**  
-Static members live in **Method Area**, non-static (instance) members live in the **Heap**.
-
 ---
 
 ## 💻 Code Example  
@@ -123,20 +111,13 @@ Static members live in **Method Area**, non-static (instance) members live in th
 ## 📝 Practice Questions  
 
 **Q1.** Create a `Car` class with properties `brand` and `year`. Create one object and print its details.  
-➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java#L60-L65)  
-🤖 Hint: Think about adding two fields and assigning them using dot notation.  
-
----
+➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java#L60-L66)  
 
 **Q2.** Add a static variable `totalCarsCreated` in the `Car` class. Increment it every time a new object is created. Print the total after creating 3 objects.  
 ➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java#L68-L74)  
-🤖 Hint: Use `Car.totalCarsCreated++` inside the constructor.  
-
----
 
 **Q3.** Write a non-static method `startEngine()` that prints the car's brand. Can you call it directly from `main`? If not, why? Fix the code.  
-➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java#L77-L83)  
-🤖 Hint: Remember → `main` is static, so you need an object to call non-static methods.  
+➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java#L76-L82)  
 
 ---
 
