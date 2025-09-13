@@ -36,15 +36,18 @@ public class Day_01_Classes_And_Objects {
         Q1. Create a Car class with properties brand and year. 
             Create one object and print its details.
         TODO: Write your solution here.
+        // 🔗 Back to Notes: Day_01-Classes_And_Objects.md#q1
 
         Q2. Add a static variable totalCarsCreated in the Car class. 
             Increment it every time a new object is created. 
             Print the total after creating 3 objects.
         TODO: Write your solution here.
+        // 🔗 Back to Notes: Day_01-Classes_And_Objects.md#q2
 
         Q3. Write a non-static method startEngine() that prints the car's brand. 
             Can you call it directly from main()? If not, why? Fix the code.
         TODO: Write your solution here.
+        // 🔗 Back to Notes: Day_01-Classes_And_Objects.md#q3
 
         ------------------------------------------------------ */
     }
