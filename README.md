@@ -1,2 +1,5 @@
-# Java-Developer-Roadmap
-A comprehensive repository for my Java learning journey, covering fundamental concepts, data structures, and core CS principles. My goal is to become a proficient Java developer in 6 months.
+# My 6-Month Java Journey
+
+## Part 1: Java Basics
+
+- [Day 1: Classes and Objects](01-Java_Basics/Day_01-Classes_And_Objects.md)
