@@ -109,19 +109,12 @@ public static String builder = "Modern Builders";
 
 ## 📝 Practice Questions  
 
-### 🟢 Easy  
 **Q1.** Create a `Car` class with properties `brand` and `year`. Create one object and print its details.  
 ➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java)  
 
----
-
-### 🟡 Medium  
 **Q2.** Add a static variable `totalCarsCreated` in the `Car` class. Increment it every time a new object is created. Print the total after creating 3 objects.  
 ➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java)  
 
----
-
-### 🔴 Hard  
 **Q3.** Write a non-static method `startEngine()` that prints the car's brand. Can you call it directly from `main`? If not, why? Fix the code.  
 ➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java)  
 
