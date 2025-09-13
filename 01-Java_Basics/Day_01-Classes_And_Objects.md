@@ -1,46 +1,74 @@
-1. The Blueprint: What is a Class?
-Think of a class as a blueprint or a template. It's a design, an idea, not a real, physical thing.
+# 📘 Day 1: Class, Object, new & Static vs Non-Static  
 
-Example from life: A blueprint for a house. It shows the number of rooms, the color of the walls, and the layout, but you can't live in the blueprint itself. It’s just the plan.
+---
 
-In Java: A class defines the properties (variables) and the actions (methods) that all objects created from it will have. For example, a Car class defines that every car will have a color and a speed.
+## 🏗️ 1. The Blueprint: What is a Class?  
+Think of a **Class** as a **blueprint or template**.  
+It helps us create **Objects**.  
 
-2. The Real Thing: What is an Object?
-An object is a real thing that is made from the class blueprint. It's a physical instance that exists in the computer's memory.
+### 💭 Real-Life Example  
+A house blueprint → shows layout, but you can’t live in it.  
 
-Example from life: The actual house built from the blueprint. It has a specific color, a specific number of rooms, and you can live in it.
+### 💻 In Java  
+Defines:  
+- Properties → Variables  
+- Actions → Methods  
 
-In Java: An object is an instance of a class. You can create many different objects from the same class. Each object has its own unique set of properties.
+---
 
-3. The Builder: The new Keyword
-The new keyword is the builder. It's the command that tells Java, "Please create a new object from this class."
+## 🚗 2. The Real Thing: What is an Object?  
+An **Object** is the real house built from the blueprint.  
+Stored in memory with its own values.  
 
-Example from life: The builder who takes the blueprint and constructs the real house.
+### 💭 Real-Life Example  
+A real house → has a specific color, rooms, and you can live in it.  
 
-In Java: When you write new Car(), you are instructing Java to use the Car blueprint and create a new, real Car object in the computer's memory.
+### 💻 In Java  
+- Instance of a Class.  
+- Each object has its own unique properties.  
 
-4. static vs. non-static: The Golden Rule
-This is a concept that confuses many beginners, but once you understand the simple logic, it will make perfect sense.
+---
 
-non-static (Object-Level): These are properties that belong to the individual object. Each object has its own unique copy.
+## 👷 3. The Builder: The `new` Keyword  
+The **new** keyword is like a builder.  
 
-Analogy: The color of the house. One house is red, another is blue. The color belongs to each specific house.
+```java
+Car car1 = new Car();
+⚖️ 4. static vs. non-static: The Golden Rule
+🔴 Non-static (Object-Level)
+Belongs to individual objects.
 
-In Code: A non-static variable is declared inside a class but without the static keyword. For example, String color;.
+Each object has its own copy.
 
-static (Class-Level): These are properties that belong to the blueprint itself, not the individual objects. There is only one copy of this information, which is shared by all objects of that class.
+java
+Copy code
+String color;
+🔵 static (Class-Level)
+Belongs to the blueprint (class).
 
-Analogy: The architect's name on the blueprint. The architect's name is the same for every house built from that specific blueprint.
+Shared by all objects.
 
-In Code: A static variable is declared using the static keyword. For example, public static String architectName = "Raj";.
+java
+Copy code
+public static String builder = "Modern Builders";
+⚡ Fundamental Rule
+Static exists before objects.
 
-The Fundamental Rule: Why static cannot access non-static
-This is the most common error for beginners.
+Non-static exists only after new.
 
-A static method, like the main method, belongs to the blueprint (class). It exists before any real objects (houses) are created.
+❌ Static cannot access non-static directly.
 
-A non-static variable, like color, belongs to a specific object (house). It only exists after you use the new keyword to create it.
+✅ Create an Object first, then access.
 
-Therefore, the static method cannot access the non-static variable directly because the non-static variable might not even exist yet!
+💡 5. Daily Tip
+👉 Whenever you’re confused about static vs. non-static, ask yourself:
+“Does this belong to the blueprint, or to a specific house built from the blueprint?”
 
-You must first create an object using new, and then access the non-static variable through that object.
+This solves 99% of beginner errors.
+
+📌 References
+Variable
+
+Constructor
+
+Class & Object
