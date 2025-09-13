@@ -72,4 +72,75 @@ Car car1 = new Car();
 
 ### 🔴 Non-static (Object-Level)  
 - Belongs to individual objects.  
-- Each
+- Each object has its own unique copy.  
+
+💭 **Example**: One house is red, another is blue → color belongs to each house.  
+
+```java
+String color;
+```
+
+---
+
+### 🔵 static (Class-Level)  
+- Belongs to the class blueprint itself.  
+- Only one copy exists, shared by all objects.  
+
+💭 **Example**: The architect’s name on the blueprint → same for every house.  
+
+```java
+public static String builder = "Modern Builders";
+```
+
+---
+
+## ⚡ Fundamental Rule  
+- A `static` method (like `main`) belongs to the class (blueprint).  
+- A non-static variable (like `color`) belongs to an object (house).  
+- ❌ Static cannot access non-static directly.  
+- ✅ You must first create an object, then access it.  
+
+---
+
+## 💻 Code Example  
+➡️ [See Full Code Here](Day_01-Classes_And_Objects.java)  
+
+---
+
+## 📝 Practice Questions  
+
+### 🟢 Easy  
+**Q1.** Create a `Car` class with properties `brand` and `year`. Create one object and print its details.  
+➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java)  
+
+---
+
+### 🟡 Medium  
+**Q2.** Add a static variable `totalCarsCreated` in the `Car` class. Increment it every time a new object is created. Print the total after creating 3 objects.  
+➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java)  
+
+---
+
+### 🔴 Hard  
+**Q3.** Write a non-static method `startEngine()` that prints the car's brand. Can you call it directly from `main`? If not, why? Fix the code.  
+➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java)  
+
+---
+
+## 💡 Daily Tip  
+👉 Whenever you’re confused about static vs. non-static, ask yourself:  
+“Does this belong to the blueprint, or to a specific house built from the blueprint?”  
+
+✅ This mental model solves 99% of beginner errors.  
+
+---
+
+## 📌 Solutions  
+➡️ All solutions are to be written by YOU in [Day_01-Classes_And_Objects.java](Day_01-Classes_And_Objects.java)  
+
+---
+
+## 🔗 References  
+- [Variables](#)  
+- [Constructors](#)  
+- [Class & Object](Day_01-Classes_And_Objects.md)  
