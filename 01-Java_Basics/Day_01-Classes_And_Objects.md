@@ -1,3 +1,5 @@
+[⬅ Back to README](../README.md)  
+
 # 📘 Day 01 – Classes and Objects  
 
 ---
@@ -11,8 +13,8 @@
 6. [Code Example](#-code-example)  
 7. [Practice Questions](#-practice-questions)  
 8. [Daily Tip](#-daily-tip)  
-9. [AI Memory Hacks](#-ai-memory-hacks)  
-10. [Solutions](#-solutions)  
+9. [⚡ Interview Alert](#-interview-alert)  
+10. [🧠 Memory Hacks](#-memory-hacks)  
 11. [References](#-references)  
 
 ---
@@ -56,6 +58,21 @@ An object is an instance of a class.
 Car car1 = new Car();   // First Object
 Car car2 = new Car();   // Second Object
 ```
+
+### 🗂️ Memory Diagram  
+
+```
+Heap (Objects)          Stack (References)
+-----------------        -----------------
+Car@101 {color=Red}  <-  car1
+Car@102 {color=Blue} <-  car2
+```
+
+💡 **Hinglish Explain:**  
+Heap = badi almari jisme Java **asli objects** rakhta hai.  
+Stack = chhota daftar jisme **reference slips** rakhi hoti hain.  
+`car1` ek slip hai jo almari ke locker `Car@101` ki taraf point karti hai.  
+Matlab **object heap me hota hai, reference stack me**.  
 
 ---
 
@@ -104,27 +121,20 @@ public static String builder = "Modern Builders";
 ---
 
 ## 💻 Code Example  
-➡️ [See Full Code Here](Day_01-Classes_And_Objects.java)  
+➡️ See Full Code in **Day_01-Classes_And_Objects.java**  
 
 ---
 
 ## 📝 Practice Questions  
 
-### Q1  
-Create a `Car` class with properties `brand` and `year`. Create one object and print its details.  
-➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java#q1)  
+**Q1.** Create a `Car` class with properties `brand` and `year`. Create one object and print its details.  
+➡️ TODO in `.java`  
 
----
+**Q2.** Add a static variable `totalCarsCreated` in the `Car` class. Increment it every time a new object is created. Print the total after creating 3 objects.  
+➡️ TODO in `.java`  
 
-### Q2  
-Add a static variable `totalCarsCreated` in the `Car` class. Increment it every time a new object is created. Print the total after creating 3 objects.  
-➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java#q2)  
-
----
-
-### Q3  
-Write a non-static method `startEngine()` that prints the car's brand. Can you call it directly from `main`? If not, why? Fix the code.  
-➡️ [Go to TODO in .java](Day_01-Classes_And_Objects.java#q3)  
+**Q3.** Write a non-static method `startEngine()` that prints the car's brand. Can you call it directly from `main`? If not, why? Fix the code.  
+➡️ TODO in `.java`  
 
 ---
 
@@ -136,15 +146,17 @@ Write a non-static method `startEngine()` that prints the car's brand. Can you c
 
 ---
 
-## 🧠 AI Memory Hacks  
-- **Static = “Same for All”** (like school rules).  
-- **Object = “Own for Each”** (like home rules).  
-- **new = Builder** who constructs real things from plans.  
+## ⚡ Interview Alert  
+- **Class vs Object** → Very common fresher-level interview question.  
+- **static vs non-static** → Almost guaranteed in interviews (MCQ + coding).  
+- **new keyword** → Frequently asked: *“What happens in memory when you write `new`?”*  
 
 ---
 
-## 📌 Solutions  
-➡️ All solutions are to be written by YOU in [Day_01-Classes_And_Objects.java](Day_01-Classes_And_Objects.java)  
+## 🧠 Memory Hacks  
+- **Static = “Same for All”** (like school rules).  
+- **Object = “Own for Each”** (like home rules).  
+- **new = Builder** who constructs real things from plans.  
 
 ---
 
