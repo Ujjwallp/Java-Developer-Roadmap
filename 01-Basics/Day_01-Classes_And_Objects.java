@@ -1,51 +1,37 @@
-// Day 01 – Classes and Objects
+public class Day_01_Classes_And_Objects {
 
-class Car {
-    String color;   // non-static property
-    int speed;      // non-static property
-    static String builder = "Modern Builders"; // static property
+    String color;   // Non-static property (Object-Level)
+    int speed;      // Non-static property (Object-Level)
+
+    public static String builder = "Modern Builders"; // Static property (Class-Level)
 
     void drive() {
         System.out.println("Car is driving...");
     }
 
     void startEngine() {
-        System.out.println("Engine started for " + color + " car");
+        System.out.println("Engine started for: " + this.color);
     }
-}
 
-public class Day_01_Classes_And_Objects {
     public static void main(String[] args) {
-        // Example objects
-        Car car1 = new Car();
+
+        // Creating objects using 'new' keyword
+        Day_01_Classes_And_Objects car1 = new Day_01_Classes_And_Objects();
         car1.color = "Red";
         car1.speed = 100;
 
-        Car car2 = new Car();
+        Day_01_Classes_And_Objects car2 = new Day_01_Classes_And_Objects();
         car2.color = "Blue";
         car2.speed = 120;
 
-        System.out.println("Car1 color: " + car1.color);
-        System.out.println("Car2 color: " + car2.color);
-        System.out.println("Builder: " + Car.builder);
+        // Access non-static via objects
+        System.out.println("Car1 Color: " + car1.color);
+        System.out.println("Car2 Color: " + car2.color);
 
+        // Access static directly via class
+        System.out.println("Builder: " + Day_01_Classes_And_Objects.builder);
+
+        // Call non-static method via object
         car1.startEngine();
-
-        /* ---------------- PRACTICE QUESTIONS ----------------
-
-        Q1. Create a Car class with properties brand and year.
-            Create one object and print its details.
-        TODO: Write your solution here.
-
-        Q2. Add a static variable totalCarsCreated in the Car class.
-            Increment it every time a new object is created.
-            Print the total after creating 3 objects.
-        TODO: Write your solution here.
-
-        Q3. Write a non-static method startEngine() that prints the car's brand.
-            Can you call it directly from main()? If not, why? Fix the code.
-        TODO: Write your solution here.
-
-        ------------------------------------------------------ */
     }
 }
