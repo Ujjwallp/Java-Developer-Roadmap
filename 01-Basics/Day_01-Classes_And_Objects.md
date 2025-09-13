@@ -117,20 +117,20 @@ public static String builder = "Modern Builders";
 ---
 
 ## 💻 Code Example  
-➡️ See Full Code in **Day_01-Classes_And_Objects.java**  
+➡️ See Full Code in **[Day_01-Classes_And_Objects.java](Day_01-Classes_And_Objects.java)**  
 
 ---
 
 ## 📝 Practice Questions  
 
 **Q1.** Create a `Car` class with properties `brand` and `year`. Create one object and print its details.  
-➡️ [Solution (Java) — lines 45–62](Day_01-Classes_And_Objects.java#L45-L62)
+➡️ Go to **[Day_01-Classes_And_Objects.java](Day_01-Classes_And_Objects.java)**  
 
-**Q2.** Add a static variable `totalCarsCreated` in the `Car` class. ...  
-➡️ [Solution (Java) — lines 70–95](Day_01-Classes_And_Objects.java#L70-L95)
+**Q2.** Add a static variable `totalCarsCreated` in the `Car` class. Increment it every time a new object is created. Print the total after creating 3 objects.  
+➡️ Go to **[Day_01-Classes_And_Objects.java](Day_01-Classes_And_Objects.java)**  
 
-**Q3.** Write a non-static method `startEngine()` ...  
-➡️ [Solution (Java) — lines 110–130](Day_01-Classes_And_Objects.java#L110-L130)
+**Q3.** Write a non-static method `startEngine()` that prints the car's brand. Can you call it directly from `main`? If not, why? Fix the code.  
+➡️ Go to **[Day_01-Classes_And_Objects.java](Day_01-Classes_And_Objects.java)**  
 
 ---
 
