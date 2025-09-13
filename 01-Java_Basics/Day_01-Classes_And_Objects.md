@@ -22,7 +22,7 @@ class Car {
     void drive() {  // action
         System.out.println("Car is driving...");
     }
-}
+}```
 🚗 2. The Real Thing: What is an Object?
 An Object is the real house built from the blueprint.
 It is stored in memory with its own values.
@@ -35,17 +35,16 @@ Instance of a Class.
 
 Each object has its own unique properties.
 
-java
-Copy code
+```
 Car car1 = new Car();   // First Object
 Car car2 = new Car();   // Second Object
+```
 👷 3. The Builder: The new Keyword
 The new keyword is like a builder.
 It creates an Object from a Class blueprint.
 
-java
-Copy code
-Car car1 = new Car();
+```
+Car car1 = new Car();```
 ⚖️ 4. static vs. non-static: The Golden Rule
 🔴 Non-static (Object-Level)
 Belongs to individual objects.
@@ -53,10 +52,8 @@ Belongs to individual objects.
 Each object has its own unique copy.
 
 💭 Example: One house is red, another is blue → color belongs to each house.
-
-java
-Copy code
-String color;
+```
+String color;```
 🔵 static (Class-Level)
 Belongs to the class blueprint itself.
 
@@ -64,9 +61,8 @@ Only one copy exists, shared by all objects.
 
 💭 Example: The architect’s name on the blueprint → same for every house.
 
-java
-Copy code
-public static String builder = "Modern Builders";
+```
+public static String builder = "Modern Builders";```
 ⚡ Fundamental Rule
 Static exists before objects.
 
