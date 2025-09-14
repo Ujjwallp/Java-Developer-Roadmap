@@ -1,4 +1,4 @@
-# 📘 Java Notes – Classes, Objects & Non-Static Variables
+# 📘 Java Notes – Day_01: Classes, Objects & Non-Static Variables
 
 ---
 
@@ -6,22 +6,22 @@
 
 ### ✅ What is a Class?
 - A **class** is a blueprint or template used to create objects.  
-- It defines the **properties (variables/fields)** and **behaviors (methods/functions)** of an entity.  
+- Defines **properties (fields/variables)** and **behaviors (methods/functions)**.  
 - Example in real life:  
-  - **Class = Car design (blueprint)**  
+  - **Class = Car blueprint**  
   - **Objects = Tesla, BMW, Audi (real cars built from that design)**  
 
 ---
 
 ### ✅ What is an Object?
 - An **object** is a runtime instance of a class.  
-- Objects are created using the `new` keyword.  
-- Objects live in **heap memory**.  
+- Created using the `new` keyword.  
+- Stored in **heap memory**.  
 - Reference variable stores the **memory address** of the object.  
 
 👉 Example in real life:  
-- **Class = Recipe of Pizza**  
-- **Object = The actual pizza you cooked from recipe**  
+- **Class = Pizza recipe**  
+- **Object = Pizza you make from that recipe**  
 
 ---
 
@@ -58,18 +58,18 @@ class Car {
 ## 🔹 Non-Static Variables (Instance Variables)
 
 ### ✅ Definition
-- Declared inside a class but outside methods, without `static` keyword.  
-- Each **object gets its own copy** of these variables.  
+- Declared inside a class but outside methods, **without `static` keyword**.  
+- Each **object gets its own copy**.  
 - Stored in **heap memory**.  
 - Must be accessed through an **object reference**.  
 
 ---
 
-### ✅ Key Properties
-1. Belongs to the object, not the class.  
-2. Every object has **its own independent copy**.  
-3. Cannot be accessed directly inside a `static` method (`main`).  
-4. If not initialized, JVM provides **default values**.  
+### ✅ Properties
+1. Belong to objects, not the class.  
+2. Each object has its own **independent copy**.  
+3. Cannot be accessed directly inside `static` methods.  
+4. JVM gives **default values** if not initialized.  
 
 ---
 
@@ -97,7 +97,6 @@ public class Student {
 ---
 
 ## 🔹 Default Values of Non-Static Variables
-If not initialized, JVM assigns default values:
 
 | Data Type | Default Value |
 |-----------|---------------|
@@ -106,16 +105,16 @@ If not initialized, JVM assigns default values:
 | double    | 0.0           |
 | boolean   | false         |
 | char      | '\u0000' (null char) |
-| Object ref| null          |
+| Object    | null          |
 
 ---
 
 ### ✅ Example
 ```java
 public class Test {
-    int x;       // default → 0
-    boolean b;  // default → false
-    String s;   // default → null
+    int x;        // default = 0
+    boolean b;    // default = false
+    String s;     // default = null
 
     public static void main(String[] args) {
         Test t = new Test();
@@ -130,28 +129,27 @@ public class Test {
 
 ## 🔹 Difference: Static vs Non-Static Variables
 
-| Feature                | Static Variable                     | Non-Static Variable |
-|-------------------------|-------------------------------------|---------------------|
-| Belongs to              | Class (shared)                     | Object (separate copy) |
-| Memory Location         | Method Area                        | Heap (inside object) |
-| Access                  | ClassName or object reference      | Only via object reference |
-| Default Value           | Given by JVM if not initialized    | Given by JVM if not initialized |
-| Lifetime                | Till class is unloaded             | Till object is destroyed |
+| Feature           | Static Variable (Class Variable) | Non-Static Variable (Instance Variable) |
+|-------------------|----------------------------------|------------------------------------------|
+| Belongs To        | Class (shared by all objects)    | Each object (separate copy)              |
+| Memory Location   | Method Area                      | Heap (inside object)                      |
+| Copies            | One copy only                    | New copy for each object                  |
+| Access            | ClassName or object reference    | Only through object reference             |
+| Lifetime          | Till class is unloaded           | Till object is destroyed                  |
 
 ---
 
 ## 📝 Summary
 - **Class = blueprint**, **Object = instance**.  
-- Non-static variables → belong to objects, separate copy per object.  
-- Cannot be accessed directly from static methods.  
-- JVM gives default values if not initialized.  
-- Objects are created using `new` keyword, stored in heap, reference stored in variable.  
+- Non-static variables → object-level, separate copy per object.  
+- Must use object to access non-static variables inside static methods.  
+- JVM provides default values automatically.  
 
 ---
 
 ## 💡 Memory Trick
-🔑 **Static = whiteboard (shared by whole class)**  
-🔑 **Non-static = personal notebook (private for each student)**  
+🔑 **Static = whiteboard (shared by the class)**  
+🔑 **Non-static = personal notebook (separate for each student)**  
 
 ---
 
@@ -173,6 +171,8 @@ Q6. Create a class `Employee` with variables `id`, `name`, and `salary`.
    - Create an array of 5 employees.  
    - Print all details using a loop.  
 
+👉 [Go to Solutions File](Day_01-Classes_And_Objects.java)
+
 ---
 
-✅ Next Topic: **Static Variables vs Non-Static Variables**
+✅ Next Topic (Day_02): **Static Variables vs Non-Static Variables**
