@@ -1,13 +1,16 @@
-# 🚀 Java Developer Roadmap
+# 📑 README
 
-A comprehensive repository for my Java learning journey, covering:
-- Fundamentals (Classes, Objects, OOPs, Memory, etc.)
-- Core CS subjects (OS, DBMS, CN, DSA)
-- Practice problems and projects
+## 📘 Day_01: Classes, Objects & Non-Static Variables
 
-## 📑 Contents
-- [01 – Basics](01-Basics/)
-  - [Day 01 – Classes & Objects](01-Basics/Day_01-Classes_And_Objects.md)
+This folder contains notes and practice templates for **Day_01**.
 
-## 📘 About
-This repo is my **6-month journey** to become a Java Developer.
+---
+
+### 📂 Files
+- **Day_01-Classes_And_Objects.md** → Complete notes with explanations, examples, memory tricks, and practice questions.  
+- **Day_01-Classes_And_Objects.java** → Single solutions file with TODOs for all practice questions.  
+
+---
+
+### 🚀 Next Topic
+**Day_02-Static_Variables**
