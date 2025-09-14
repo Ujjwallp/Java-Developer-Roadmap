@@ -26,7 +26,7 @@ Java-Developer-Roadmap/
 
 - 📄 [Notes (Day_01-Classes_And_Objects.md)](01-Basics/Day_01-Classes_And_Objects.md)  
 - 💻 [Practice File (Day_01-Classes_And_Objects.java)](01-Basics/Day_01-Classes_And_Objects.java)  
-- 📂 [Folder Link](01-Basics/Day_01-Classes_And_Objects/)
+- 📂 [Folder Link](01-Basics/)
 ---
 
 ### 📘 [Day_02 – Static Variables](01-Basics/Day_02-Static_Variables/Day_02-Static_Variables.md)
