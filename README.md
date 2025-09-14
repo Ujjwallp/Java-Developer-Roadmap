@@ -9,16 +9,11 @@ Introduction to Java OOP basics:
 
 ---
 
-## 📂 Folder
-📁 [01-Basics](../../01-Basics/) → 📁 [Day_01-Classes_And_Objects](./)
-
----
-
 ## 📂 Files
-| File | Description |
-|------|-------------|
-| [Day_01-Classes_And_Objects.md](./Day_01-Classes_And_Objects.md) | Detailed notes with explanations, examples, and practice questions. |
-| [Day_01-Classes_And_Objects.java](./Day_01-Classes_And_Objects.java) | Practice file with all questions (comments + TODOs for you to solve). |
+| File | Location | Description |
+|------|----------|-------------|
+| [Day_01-Classes_And_Objects.md](./Day_01-Classes_And_Objects.md) | `01-Basics/Day_01-Classes_And_Objects/` | Detailed notes with explanations, examples, and practice questions. |
+| [Day_01-Classes_And_Objects.java](./Day_01-Classes_And_Objects.java) | `01-Basics/Day_01-Classes_And_Objects/` | Practice file with all questions (comments + TODOs for you to solve). |
 
 ---
 
