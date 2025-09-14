@@ -22,10 +22,11 @@ Java-Developer-Roadmap/
 
 ## 📑 Topics Covered
 
-### 📘 [Day_01 – Classes, Objects & Non-Static Variables](01-Basics/Day_01-Classes_And_Objects/Day_01-Classes_And_Objects.md)
-- 📄 [Notes](01-Basics/Day_01-Classes_And_Objects/Day_01-Classes_And_Objects.md)  
-- 💻 [Practice File](01-Basics/Day_01-Classes_And_Objects/Day_01-Classes_And_Objects.java)  
+## 📘 Day_01 – Classes, Objects & Non-Static Variables
 
+- 📄 [Notes (Day_01-Classes_And_Objects.md)](01-Basics/Day_01-Classes_And_Objects/Day_01-Classes_And_Objects.md)  
+- 💻 [Practice File (Day_01-Classes_And_Objects.java)](01-Basics/Day_01-Classes_And_Objects/Day_01-Classes_And_Objects.java)  
+- 📂 [Folder Link](01-Basics/Day_01-Classes_And_Objects/)
 ---
 
 ### 📘 [Day_02 – Static Variables](01-Basics/Day_02-Static_Variables/Day_02-Static_Variables.md)
