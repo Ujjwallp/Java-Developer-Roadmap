@@ -1,162 +1,178 @@
-[⬅ Back to README](../README.md)
-
-# 📘 Day 01 – Classes and Objects
+# 📘 Java Notes – Classes, Objects & Non-Static Variables
 
 ---
 
-## 📑 Table of Contents
-1. [The Blueprint: What is a Class?](#-the-blueprint-what-is-a-class)
-2. [The Real Thing: What is an Object?](#-the-real-thing-what-is-an-object)
-3. [The Builder: The new Keyword](#-the-builder-the-new-keyword)
-4. [static vs. non-static: The Golden Rule](#%EF%B8%8F-static-vs-non-static-the-golden-rule)
-5. [The Fundamental Rule](#-fundamental-rule)
-6. [Code Example](#-code-example)
-7. [Practice Questions](#-practice-questions)
-8. [Daily Tip](#-daily-tip)
-9. [⚡ Interview Alert](#-interview-alert)
-10. [🧠 Memory Hacks](#-memory-hacks)
-11. [References](#-references)
+## 🔹 Class and Object Basics
+
+### ✅ What is a Class?
+- A **class** is a blueprint or template used to create objects.  
+- It defines the **properties (variables/fields)** and **behaviors (methods/functions)** of an entity.  
+- Example in real life:  
+  - **Class = Car design (blueprint)**  
+  - **Objects = Tesla, BMW, Audi (real cars built from that design)**  
 
 ---
 
-## 🏗️ The Blueprint: What is a Class?
-Think of a **Class** as a **blueprint or template**.
-It helps us create **Objects**.
+### ✅ What is an Object?
+- An **object** is a runtime instance of a class.  
+- Objects are created using the `new` keyword.  
+- Objects live in **heap memory**.  
+- Reference variable stores the **memory address** of the object.  
 
-💭 **Real-Life Example**:
-A **house blueprint** → shows layout, but you can’t live in it.
+👉 Example in real life:  
+- **Class = Recipe of Pizza**  
+- **Object = The actual pizza you cooked from recipe**  
 
-💻 **In Java**:
+---
 
+### ✅ Example
 ```java
 class Car {
-    String color;   // property
-    int speed;      // property
+    String brand;
+    int speed;
 
-    void drive() {  // action
-        System.out.println("Car is driving...");
+    void drive() {
+        System.out.println(brand + " is driving at " + speed + " km/h");
+    }
+
+    public static void main(String[] args) {
+        // Creating first object
+        Car c1 = new Car();
+        c1.brand = "Tesla";
+        c1.speed = 120;
+
+        // Creating second object
+        Car c2 = new Car();
+        c2.brand = "BMW";
+        c2.speed = 100;
+
+        // Calling methods
+        c1.drive(); // Tesla is driving at 120 km/h
+        c2.drive(); // BMW is driving at 100 km/h
     }
 }
 ```
 
 ---
 
-## 🚗 The Real Thing: What is an Object?
-An **Object** is the real house built from the blueprint.
-It is stored in memory with its own values.
+## 🔹 Non-Static Variables (Instance Variables)
 
-💭 **Real-Life Example**:
-A real house → has a specific color, rooms, and you can live in it.
+### ✅ Definition
+- Declared inside a class but outside methods, without `static` keyword.  
+- Each **object gets its own copy** of these variables.  
+- Stored in **heap memory**.  
+- Must be accessed through an **object reference**.  
 
-💻 **In Java**:
+---
 
+### ✅ Key Properties
+1. Belongs to the object, not the class.  
+2. Every object has **its own independent copy**.  
+3. Cannot be accessed directly inside a `static` method (`main`).  
+4. If not initialized, JVM provides **default values**.  
+
+---
+
+### ✅ Example
 ```java
-Car car1 = new Car();   // First Object
-Car car2 = new Car();   // Second Object
-```
+public class Student {
+    int id;        // non-static variable
+    String name;   // non-static variable
 
-### 🗂️ Memory Diagram
+    public static void main(String[] args) {
+        Student s1 = new Student();  // object 1
+        s1.id = 101;
+        s1.name = "Amit";
 
-```
-Heap (Objects)          Stack (References)
------------------        -----------------
-Car@101 {color=Red}  <-  car1
-Car@102 {color=Blue} <-  car2
-```
+        Student s2 = new Student();  // object 2
+        s2.id = 102;
+        s2.name = "Neha";
 
-💡 **Hinglish Explain:**
-Heap = badi almari jisme Java **asli objects** rakhta hai.
-Stack = chhota daftar jisme **reference slips** rakhi hoti hain.
-`car1` ek slip hai jo almari ke locker `Car@101` ki taraf point karti hai.
-Matlab **object heap me hota hai, reference stack me**.
+        System.out.println(s1.id + " " + s1.name);
+        System.out.println(s2.id + " " + s2.name);
+    }
+}
+```
 
 ---
 
-## 👷 The Builder: The new Keyword
-The `new` keyword is like a builder.
-It creates an Object from a Class blueprint.
+## 🔹 Default Values of Non-Static Variables
+If not initialized, JVM assigns default values:
 
+| Data Type | Default Value |
+|-----------|---------------|
+| int       | 0             |
+| float     | 0.0           |
+| double    | 0.0           |
+| boolean   | false         |
+| char      | '\u0000' (null char) |
+| Object ref| null          |
+
+---
+
+### ✅ Example
 ```java
-Car car1 = new Car();
+public class Test {
+    int x;       // default → 0
+    boolean b;  // default → false
+    String s;   // default → null
+
+    public static void main(String[] args) {
+        Test t = new Test();
+        System.out.println("int: " + t.x);
+        System.out.println("boolean: " + t.b);
+        System.out.println("String: " + t.s);
+    }
+}
 ```
 
 ---
 
-## ⚖️ static vs. non-static: The Golden Rule
+## 🔹 Difference: Static vs Non-Static Variables
 
-### 🔴 Non-static (Object-Level)
-- Belongs to individual objects.
-- Each object has its own unique copy.
-
-💭 **Example**: One house is red, another is blue → color belongs to each house.
-
-```java
-String color;
-```
+| Feature                | Static Variable                     | Non-Static Variable |
+|-------------------------|-------------------------------------|---------------------|
+| Belongs to              | Class (shared)                     | Object (separate copy) |
+| Memory Location         | Method Area                        | Heap (inside object) |
+| Access                  | ClassName or object reference      | Only via object reference |
+| Default Value           | Given by JVM if not initialized    | Given by JVM if not initialized |
+| Lifetime                | Till class is unloaded             | Till object is destroyed |
 
 ---
 
-### 🔵 static (Class-Level)
-- Belongs to the class blueprint itself.
-- Only one copy exists, shared by all objects.
-
-💭 **Example**: The architect’s name on the blueprint → same for every house.
-
-```java
-public static String builder = "Modern Builders";
-```
+## 📝 Summary
+- **Class = blueprint**, **Object = instance**.  
+- Non-static variables → belong to objects, separate copy per object.  
+- Cannot be accessed directly from static methods.  
+- JVM gives default values if not initialized.  
+- Objects are created using `new` keyword, stored in heap, reference stored in variable.  
 
 ---
 
-## ⚡ Fundamental Rule
-- A `static` method (like `main`) belongs to the class (blueprint).
-- A non-static variable (like `color`) belongs to an object (house).
-- ❌ Static cannot access non-static directly.
-- ✅ You must first create an object, then access it.
+## 💡 Memory Trick
+🔑 **Static = whiteboard (shared by whole class)**  
+🔑 **Non-static = personal notebook (private for each student)**  
 
 ---
 
-## 💻 Code Example
-➡️ See Full Code in **Day_01-Classes_And_Objects.java**
+## 🏋️ Practice Questions
+
+Q1. Create a class `Student` with variables `id` and `name`. Create 2 objects and print their details.  
+
+Q2. Create a class `Dog` with variable `breed` and method `bark()`. Create 2 objects and call the method.  
+
+Q3. Create a class `Car` with variables `brand`, `model`, and `price`. Create 3 objects with different values and print them.  
+
+Q4. Demonstrate that changing the variable of one object does not affect another object’s variable.  
+
+Q5. Create a class `BankAccount` with instance variables `accountNumber` and `balance`.  
+   - Create multiple objects and set different balances.  
+   - Print balances separately to show independence.  
+
+Q6. Create a class `Employee` with variables `id`, `name`, and `salary`.  
+   - Create an array of 5 employees.  
+   - Print all details using a loop.  
 
 ---
 
-## 📝 Practice Questions
-
-**Q1.** Create a `Car` class with properties `brand` and `year`. Create one object and print its details.
-➡️ TODO in `.java`
-
-**Q2.** Add a static variable `totalCarsCreated` in the `Car` class. Increment it every time a new object is created. Print the total after creating 3 objects.
-➡️ TODO in `.java`
-
-**Q3.** Write a non-static method `startEngine()` that prints the car's brand. Can you call it directly from `main`? If not, why? Fix the code.
-➡️ TODO in `.java`
-
----
-
-## 💡 Daily Tip
-👉 Whenever you’re confused about static vs. non-static, ask yourself:
-“Does this belong to the blueprint, or to a specific house built from the blueprint?”
-
-✅ This mental model solves 99% of beginner errors.
-
----
-
-## ⚡ Interview Alert
-- **Class vs Object** → Very common fresher-level interview question.
-- **static vs non-static** → Almost guaranteed in interviews (MCQ + coding).
-- **new keyword** → Frequently asked: *“What happens in memory when you write `new`?”*
-
----
-
-## 🧠 Memory Hacks
-- **Static = “Same for All”** (like school rules).
-- **Object = “Own for Each”** (like home rules).
-- **new = Builder** who constructs real things from plans.
-
----
-
-## 🔗 References
-- [Variables](#)
-- [Constructors](#)
-- [Class & Object](Day_01-Classes_And_Objects.md)
+✅ Next Topic: **Static Variables vs Non-Static Variables**
